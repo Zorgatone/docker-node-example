@@ -12,6 +12,7 @@ services:
       - mongo
     environment:
       PRODUCTION: ${PRODUCTION}
+      NODE_ENV: ${NODE_ENV}
   mongo:
     image: mongo:4.0.0-xenial
     ports:
