@@ -11,7 +11,6 @@ export const listDatabases = () => {
     const db = client.db('test');
     const admin = db.admin();
     const listDatabases = util.promisify(admin.listDatabases.bind(admin));
-    return listDatabases()
-      .then((res) => Array.isArray(res && res.databases) ? res.databases.map((el) => el.name).join('\n') : '');
+    return listDatabases();
   });
 };
