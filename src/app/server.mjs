@@ -42,15 +42,5 @@ export const createServer = () => {
         })
     ));
 
-  // app.get('/', (req, res) => { res.json({ status: 200, statusMessage: '200 Ok', response: 'Hello, World!'}) });
-  // app.get('/admin/dbs/list', (req, res) => {
-  //   listDatabases()
-  //     .then((data) => res.json(data))
-  //     .catch((err) => {
-  //       console.error(err);
-  //       res.end('fail');
-  //     });
-  // });
-
   return app;
 };
