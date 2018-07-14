@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example node app running in Docker",
   "repository": {},
-  "main": "src/index.js",
+  "main": "src/index.mjs",
   "scripts": {
     "test": "jasmine",
     "start": "node --experimental-modules src/index.mjs"
@@ -13,5 +13,8 @@
   "devDependencies": {
     "eslint": "5.1.0",
     "jasmine": "3.1.0"
+  },
+  "dependencies": {
+    "mongodb": "3.1.1"
   }
 }
