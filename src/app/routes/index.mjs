@@ -1,4 +1,4 @@
-import { listDatabases, addUser } from '../mongo';
+import { listDatabases, addUser, listUsers } from '../mongo';
 
 export const routes = {
   '/': {
@@ -14,7 +14,7 @@ export const routes = {
         });
     }
   },
-  '/users': {
+  '/user': {
     post(req, res) {
       if (!req.body) {
         res.status(400).json({ status: 400, statusMessage: 'Bad Request', response: 'Missing request body' });
@@ -30,6 +30,18 @@ export const routes = {
             res.status(500).json({ status: 500, statusMessage: 'Server Error', response: 'Failed' });
           });
       }
+    }
+  },
+  '/users': {
+    get(req, res) {
+      listUsers()
+        .then((users) => {
+          res.json({ status: 200, statusMessage: 'Ok', response: users });
+        })
+        .catch((err) => {
+          console.error(err);
+          res.status(500).json({ status: 500, statusMessage: 'Server Error', response: 'Failed' });
+        });
     }
   }
 };

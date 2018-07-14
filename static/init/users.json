@@ -1,0 +1,15 @@
+[
+  {
+    "_id": {
+      "$oid": "5b4a3b65efb18200113145a6"
+    },
+    "username": "Zorgatone",
+    "firstName": "Tommaso",
+    "lastName": "Ricci",
+    "email": "zorgatone@gmail.com",
+    "gender": "male",
+    "birthDate": {
+      "$date": "1992-07-10T00:00:00.000Z"
+    }
+  }
+]

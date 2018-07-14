@@ -45,3 +45,13 @@ export const addUser = (user) => {
       return save(user);
     });
 };
+
+export const listUsers = () => {
+  return connect(url)
+    .then((client) => {
+      const collection = client.db('test').collection('users');
+      const find = util.promisify(collection.find.bind(collection));
+      return find();
+    })
+    .then((curs) => curs.toArray());
+}
