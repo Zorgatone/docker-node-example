@@ -1,0 +1,17 @@
+{
+  "name": "docker-node",
+  "version": "1.0.0",
+  "description": "Example node app running in Docker",
+  "repository": {},
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jasmine",
+    "start": "node --experimental-modules src/index.mjs"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "5.1.0",
+    "jasmine": "3.1.0"
+  }
+}
